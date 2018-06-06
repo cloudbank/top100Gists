@@ -1,0 +1,130 @@
+apply plugin: 'com.android.application'
+
+
+android {
+  compileSdkVersion build_versions.target_sdk
+  buildToolsVersion build_versions.build_tools
+  defaultConfig {
+    applicationId "com.droidteahouse.gists"
+    minSdkVersion build_versions.min_sdk
+    targetSdkVersion build_versions.target_sdk
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    javaCompileOptions {
+      annotationProcessorOptions {
+        arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+      }
+    }
+  }
+
+  buildTypes {
+    debug {
+      minifyEnabled true
+      useProguard false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'),
+          'proguard-rules.pro'
+    }
+    release {
+      minifyEnabled true
+      useProguard true
+      proguardFiles getDefaultProguardFile('proguard-android.txt'),
+          'proguard-rules.pro'
+    }
+  }
+
+
+
+
+  testOptions {
+    unitTests.returnDefaultValues = true
+    unitTests {
+      includeAndroidResources = true
+    }
+  }
+
+  dataBinding {
+    enabled = true
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  sourceSets {
+    androidTest.java.srcDirs += "src/test-common/java"
+    test.java.srcDirs += "src/test-common/java"
+  }
+  lintOptions {
+    lintConfig rootProject.file('lint.xml')
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation deps.support.app_compat
+  implementation deps.support.recyclerview
+  implementation deps.support.cardview
+  implementation deps.support.design
+  implementation deps.room.runtime
+  annotationProcessor deps.room.compiler
+
+  implementation deps.lifecycle.runtime
+  implementation deps.lifecycle.extensions
+  implementation deps.lifecycle.java8
+  implementation deps.retrofit.runtime
+  implementation deps.retrofit.gson
+
+  //maybe switch to glide
+
+  implementation 'com.squareup.picasso:picasso:2.4.0'
+  compile 'com.squareup.okhttp3:okhttp:3.2.0'
+  compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+
+
+  implementation deps.dagger.runtime
+  implementation deps.dagger.android
+  implementation deps.dagger.android_support
+  annotationProcessor deps.dagger.android_support_compiler
+  annotationProcessor deps.dagger.compiler
+
+
+
+  testImplementation 'junit:junit:4.12'
+  androidTestImplementation 'com.android.support.test:runner:1.0.1'
+  androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+  compile 'com.facebook.stetho:stetho:1.5.0'
+  compile 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+  implementation deps.paging
+
+
+  testImplementation "org.robolectric:robolectric:3.8"
+  testImplementation deps.junit
+  testImplementation deps.mock_web_server
+  testImplementation(deps.arch_core.testing, {
+    exclude group: 'com.android.support', module: 'support-compat'
+    exclude group: 'com.android.support', module: 'support-annotations'
+    exclude group: 'com.android.support', module: 'support-core-utils'
+  })
+  testImplementation deps.mockito.core
+
+  androidTestImplementation deps.support.app_compat
+  androidTestImplementation deps.support.recyclerview
+  androidTestImplementation deps.support.cardview
+  androidTestImplementation deps.support.design
+
+  androidTestImplementation(deps.espresso.core, {
+    exclude group: 'com.android.support', module: 'support-annotations'
+    exclude group: 'com.google.code.findbugs', module: 'jsr305'
+  })
+  androidTestImplementation(deps.espresso.contrib, {
+    exclude group: 'com.android.support', module: 'support-annotations'
+    exclude group: 'com.google.code.findbugs', module: 'jsr305'
+  })
+
+  androidTestImplementation(deps.arch_core.testing, {
+  })
+  androidTestImplementation deps.dexmaker
+  androidTestImplementation deps.mockito.core, {exclude group: 'net.bytebuddy'}
+
+}

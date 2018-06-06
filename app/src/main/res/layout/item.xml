@@ -1,0 +1,74 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+  <data>
+    <import type="com.droidteahouse.gists.viewmodel.ItemViewModel"/>
+    <variable
+        name="itemViewModel"
+        type="com.droidteahouse.gists.viewmodel.ItemViewModel"/>
+  </data>
+
+  <RelativeLayout
+
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="16dp">
+
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginRight="8dp"
+        app:imageUrl="@{itemViewModel.getOwnerAvatarUrl()}"
+    />
+    <TextView
+        android:id="@+id/item_created"
+        android:layout_toRightOf="@+id/item_image"
+        android:layout_toEndOf="@+id/item_image"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/item_image"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@{itemViewModel.getCreated()}"
+    />
+
+    <TextView
+        android:id="@+id/item_url"
+        android:layout_below="@+id/item_created"
+        android:layout_toRightOf="@+id/item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:textColorHighlight="@color/colorPrimaryDark"
+        android:textColorLink="@color/colorPrimaryDark"
+        app:urlLink="@{itemViewModel.getUrl()}"
+    />
+
+    <LinearLayout
+        android:id="@+id/filelist"
+        android:layout_below="@+id/item_url"
+        app:entries="@{itemViewModel.getAttachedFiles()}"
+        app:layout="@{@layout/attachedfiles}"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout="@+id/item_url">
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/item_image"
+        android:ellipsize="end"
+        android:gravity="right"
+        android:maxLines="1"
+        android:text="@{itemViewModel.getOwnerLogin()}"
+    />
+
+
+  </RelativeLayout>
+</layout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+
+  <data>
+    <variable
+        name="data"
+        type="com.droidteahouse.gists.vo.Gist.AttachedFile"/>
+  </data>
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="16dp">
+    <TextView
+        android:id="@+id/item_file_name"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@{data.filename}"
+        tools:text="myfiles"/>
+
+
+    <TextView
+        android:id="@+id/item_file_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_file_name"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@{data.type}"
+        tools:text="application/java"/>
+
+
+    <TextView
+        android:id="@+id/item_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_file_type"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@{data.language}"
+        tools:text="Java"/>
+
+    <TextView
+        android:id="@+id/item_file_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:ellipsize="end"
+        android:gravity="right"
+        android:maxLines="1"
+        android:text="@{data.size}"
+        tools:text="file size"/>
+  </RelativeLayout>
+</layout>

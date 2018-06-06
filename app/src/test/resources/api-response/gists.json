@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://api.github.com/gists/d45b4eee455b76c524314d0f6f57447a",
+    "forks_url": "https://api.github.com/gists/d45b4eee455b76c524314d0f6f57447a/forks",
+    "commits_url": "https://api.github.com/gists/d45b4eee455b76c524314d0f6f57447a/commits",
+    "id": "d45b4eee455b76c524314d0f6f57447a",
+    "git_pull_url": "https://gist.github.com/d45b4eee455b76c524314d0f6f57447a.git",
+    "git_push_url": "https://gist.github.com/d45b4eee455b76c524314d0f6f57447a.git",
+    "html_url": "https://gist.github.com/d45b4eee455b76c524314d0f6f57447a",
+    "files": {
+      "2station": {
+        "filename": "2station",
+        "type": "text/plain",
+        "language": null,
+        "raw_url": "https://gist.githubusercontent.com/jjosiano/d45b4eee455b76c524314d0f6f57447a/raw/6264de22cdc873420046e2eae292e150e38c1fc4/2station",
+        "size": 9426
+      }
+    },
+    "public": true,
+    "created_at": "2018-03-02T01:31:40Z",
+    "updated_at": "2018-03-02T01:31:40Z",
+    "description": "2station",
+    "comments": 0,
+    "user": null,
+    "comments_url": "https://api.github.com/gists/d45b4eee455b76c524314d0f6f57447a/comments",
+    "owner": {
+      "login": "jjosiano",
+      "id": 36975584,
+      "avatar_url": "https://avatars2.githubusercontent.com/u/36975584?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/jjosiano",
+      "html_url": "https://github.com/jjosiano",
+      "followers_url": "https://api.github.com/users/jjosiano/followers",
+      "following_url": "https://api.github.com/users/jjosiano/following{/other_user}",
+      "gists_url": "https://api.github.com/users/jjosiano/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/jjosiano/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/jjosiano/subscriptions",
+      "organizations_url": "https://api.github.com/users/jjosiano/orgs",
+      "repos_url": "https://api.github.com/users/jjosiano/repos",
+      "events_url": "https://api.github.com/users/jjosiano/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/jjosiano/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "truncated": false
+  },
+  {
+    "url": "https://api.github.com/gists/0da23c3fd43b4c3ef03248d172940145",
+    "forks_url": "https://api.github.com/gists/0da23c3fd43b4c3ef03248d172940145/forks",
+    "commits_url": "https://api.github.com/gists/0da23c3fd43b4c3ef03248d172940145/commits",
+    "id": "0da23c3fd43b4c3ef03248d172940145",
+    "git_pull_url": "https://gist.github.com/0da23c3fd43b4c3ef03248d172940145.git",
+    "git_push_url": "https://gist.github.com/0da23c3fd43b4c3ef03248d172940145.git",
+    "html_url": "https://gist.github.com/0da23c3fd43b4c3ef03248d172940145",
+    "files": {
+      "open-hdinsight-key-decryption-cert.sh": {
+        "filename": "open-hdinsight-key-decryption-cert.sh",
+        "type": "application/x-sh",
+        "language": "Shell",
+        "raw_url": "https://gist.githubusercontent.com/seshness/0da23c3fd43b4c3ef03248d172940145/raw/ef15a4b890c06cb7464f37c839356408293ca6a1/open-hdinsight-key-decryption-cert.sh",
+        "size": 119
+      }
+    },
+    "public": true,
+    "created_at": "2018-03-02T01:31:19Z",
+    "updated_at": "2018-03-02T01:31:20Z",
+    "description": "",
+    "comments": 0,
+    "user": null,
+    "comments_url": "https://api.github.com/gists/0da23c3fd43b4c3ef03248d172940145/comments",
+    "owner": {
+      "login": "seshness",
+      "id": 264073,
+      "avatar_url": "https://avatars2.githubusercontent.com/u/264073?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/seshness",
+      "html_url": "https://github.com/seshness",
+      "followers_url": "https://api.github.com/users/seshness/followers",
+      "following_url": "https://api.github.com/users/seshness/following{/other_user}",
+      "gists_url": "https://api.github.com/users/seshness/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/seshness/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/seshness/subscriptions",
+      "organizations_url": "https://api.github.com/users/seshness/orgs",
+      "repos_url": "https://api.github.com/users/seshness/repos",
+      "events_url": "https://api.github.com/users/seshness/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/seshness/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "truncated": false
+  }
+]
