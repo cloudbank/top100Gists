@@ -4,7 +4,6 @@
 ## Clean Gists 
 >>>>Architecture App for latest 100 gists
 
-<img src="https://i.imgur.com/4eQ48tF.jpg" height="300"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 
 >>>>SDK 19+, Oreo compatible, for phone and tablet
 
